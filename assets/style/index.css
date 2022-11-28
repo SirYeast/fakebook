@@ -1,0 +1,219 @@
+@import "reset.css";
+
+body {
+    background-color: #212121;
+    color: #fff;
+}
+
+.container {
+    width: min(100% - 30px, 700px);
+    height: 100%;
+    margin-inline: auto;
+}
+
+header {
+    height: 60px;
+    background-color: #303030;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    width: min(100% - 30px, 1080px);
+}
+
+header h1 {
+    color: #1c89ff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+header nav {
+    margin-inline: auto;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    transition: color 0.2s;
+}
+
+header nav a:hover {
+    color: #1c89ff;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+header .profile-picture {
+    cursor: pointer;
+}
+
+header button {
+    display: none;
+    height: 100%;
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+main .container {
+    padding: 20px;
+}
+
+form {
+    margin-bottom: 40px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #303030;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+
+#file-picker {
+    color: #d3d3d3;
+}
+
+#file-picker p {
+    margin-left: 10px;
+}
+
+#file-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#file-btn-wrapper button {
+    width: 100%;
+    font-size: 28px;
+}
+
+#file-btn-wrapper input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    font-size: 100px;
+    cursor: pointer;
+}
+
+#post-btn {
+    width: 100px;
+    height: 100%;
+    margin-left: auto;
+    border-radius: 10px;
+    background-color: #ff9924;
+    text-align: center;
+}
+
+.post {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    overflow: hidden;
+}
+
+.post+.post {
+    margin-top: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-user-name {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.post-date {
+    margin-left: auto;
+    color: #2c2c2c;
+}
+
+.post-content p {
+    word-wrap: break-word;
+}
+
+.post-content img {
+    border-radius: 10px;
+}
+
+.post-content p+img {
+    margin-top: 10px;
+}
+
+#modal-wrapper {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 0.5);
+}
+
+#modal {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    padding: 20px;
+    background-color: #303030;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#modal h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#modal-profile-info p+p {
+    margin-top: 5px;
+}
+
+#modal-close-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #ff9924;
+}
+
+@media (max-width: 700px) {
+    header nav {
+        display: none;
+    }
+
+    header .profile-picture {
+        margin-left: auto;
+    }
+
+    header button {
+        display: block;
+    }
+}
