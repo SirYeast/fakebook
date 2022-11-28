@@ -176,7 +176,7 @@ form div {
 
 #modal {
     position: relative;
-    width: 600px;
+    width: min(100% - 30px, 550px);
     height: 500px;
     padding: 20px;
     background-color: #303030;
